@@ -1,0 +1,46 @@
+body{
+  /* margin: 20px; */
+  /* height: 100px; */
+  background-image: url("https://img.freepik.com/free-vector/prickly-juniper-branch-beige-gray-minimal-background_53876-113047.jpg?size=626&ext=jpg&ga=GA1.1.1448711260.1706140800&semt=ais");
+  background-size: cover;
+}
+.logo{
+  margin-left: 10%;
+  margin-bottom: 0px;
+}
+.signup{
+  /* background-color: rgb(217, 190, 190); */
+  display: grid;
+  align-items: center;
+}
+form{
+  margin-top: 0;
+  min-width: 2in;
+  width: 30%;
+  display: grid;
+  margin-left: 10%;
+}
+.login{
+  width: -webkit-fill-available;
+
+}
+.loginButton{
+  border-color: black;
+    border-radius: 10px;
+    /* background-color: red; */
+    width: 20%;
+    margin-left: 10%;
+    margin-top: -37px;
+
+    /* margin: auto; */
+    min-width: 80px;
+    text-align: center;
+    border-style: inset;
+    border-width: thin;
+    /* margin-bottom: 30px; */
+    min-width: 1.5in;
+}
+/* mat-error{
+  margin-top: 0px;
+  margin-bottom: 20px;
+} */
