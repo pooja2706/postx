@@ -1,0 +1,59 @@
+body{
+  margin: 20px;
+  background-size: cover;
+
+}
+
+mat-card{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    /* background-color: aliceblue; */
+    display: -webkit-box;
+    border-left: inset;
+    border-color: #dc143c;
+    /* border-top: inset; */
+  /* border-top-color: #fff6fa; */
+}
+mat-spinner{
+  /* height: 10px; */
+  /* max-height: 20px; */
+  margin: auto;
+}
+mat-card-header{
+  width: fit-content;
+
+  /* background-color: bisque; */
+}
+mat-card-actions{
+  width: fit-content;
+  /* background-color: aqua; */
+  margin: auto;
+  margin-right: 10px;
+}
+.loading{
+  width: fit-content;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.image-small-div{
+  background-color: #5af9c252;
+    /* background-image: url('/src/app/assets/profilenone.png'); */
+    background-image: url('profilenone.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    /* margin: auto; */
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.div-name{
+  /* margin: auto; */
+}
+.mat-card-header-text{
+  display: flex;
+  /* background-color: aliceblue; */
+  margin-bottom: 15px
+}

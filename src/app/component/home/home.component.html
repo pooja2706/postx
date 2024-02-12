@@ -1,1 +1,29 @@
-<p>home works!</p>
+<body>
+<div class="header">
+<nav class="row">
+  <div class="col-md-2 logo" >
+    <img class="logo" src={{logopath}}>
+  </div>
+  <div class="col-md-7 welcome" >Welcome {{name}}</div>
+
+  <div class="col-md-3 row">
+    <div class="col-md-4 optionsnav">
+      <button (click)="feed()" [ngClass]="{clicked: feedstate}">Feed</button>
+    </div>
+    <div class="col-md-4 optionsnav">
+      <button (click)="users()" [ngClass]="{clicked: userstate}">User</button>
+    </div>
+    <div class="col-md-4 optionsnav">
+      <button (click)="profile()" [ngClass]="{clicked: profilestate}">Profile</button>
+    </div>
+  </div>
+</nav>
+</div>
+<div>
+<app-feed     *ngIf="feedstate"     ></app-feed>
+<app-users    *ngIf="userstate"     ></app-users>
+<app-profile  *ngIf="profilestate"  ></app-profile>
+
+</div>
+</body>
+<!-- <app-signin></app-signin> -->

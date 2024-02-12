@@ -1,0 +1,33 @@
+<body>
+  <div *ngIf="pageloading" class="loading">
+    Nothing to display
+  </div>
+<mat-card *ngFor="let follower of followers;" class="row">
+  <mat-card-header class="col-md-6">
+    <div class="col">
+    <div class="row-md-6">
+      <div class="row">
+      <div class="col-md-1 image-small-div"  style="background-image: url({{follower.userdata.profileImageurl}}); margin-right: 5px;">
+      </div >
+      <div class="col-md-5">
+        {{follower.userdata.details.name}}
+      </div>
+    </div>
+    </div>
+    <div class="row-md-6 followerslist">
+      Followers: {{follower.followerslist}}
+    </div>
+  </div>
+
+
+  </mat-card-header>
+  <mat-card-actions class="col-md-4">
+    <mat-spinner
+          *ngIf="follower.loading"
+          [diameter]="30" ></mat-spinner>
+    <button mat-raised-button *ngIf="!follower.following  && !follower.loading" (click)="follow(follower)">Follow</button>
+    <button class="unfollow" *ngIf="follower.following   && !follower.loading"  (click)="unfollow(follower)">Following</button>
+  </mat-card-actions>
+</mat-card>
+
+</body>

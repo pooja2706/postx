@@ -1,4 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+  width: 100%;
+  /* background-color: #fff6fa; */
+}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body{
+  background-size: cover;
+}
+mat-card-header{
+  color: rgb(255 123 149);
+  width: fit-content;
+  font-family: sans-serif;
+  -webkit-text-stroke-width: thin;
+}
+mat-card-actions{
+  width: fit-content;
+}
+mat-caed-subtitle{
+  width: fit-content;
+}
+mat-card{
+  min-width: 360px;
+  overflow: hidden;
+  border-top: inset;
+  border-top-color: #fff6fa;
+}
+/* mat-card{
+  width: 40%;
+  margin: auto;
+  margin-top: 20px;
+  border: hidden;
+  border-left: inset;
+  border-color: #dc143c;
+} */
+.unfollow{
+  background-color: #f4eeee;
+  color: grey;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: small;
+  margin: auto;
+  width: fit-content;
+  margin-right: 0px;
+}
+
+.logo{
+  height: 40px;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+.loading{
+  width: fit-content;
+  margin: auto;
+  margin-top: 50px;
+}

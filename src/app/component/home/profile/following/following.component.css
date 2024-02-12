@@ -1,0 +1,41 @@
+body{
+  background-size: cover;
+}
+mat-card{
+  width: 30%;
+  margin: auto;
+  margin-top: 20px;
+  /* background-color: aliceblue; */
+  display: -webkit-box;
+  border-left: inset;
+  border-color: #dc143c;
+  /* border-top: inset; */
+  /* border-top-color: #fff6fa; */
+}
+mat-card-actions{
+  margin: auto;
+  margin-right: 5px;
+}
+
+mat-card-header{
+  width: fit-content;
+  height: -webkit-box;
+}
+.image-small-div{
+  background-color: #5af9c252;
+    background-image: url('profilenone.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    /* margin: auto; */
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.followerslist{
+  margin-left: 35px;
+  font-size: 9px;
+  color: #bbbbbb8f;
+  -webkit-text-stroke-width: thin;
+}
+

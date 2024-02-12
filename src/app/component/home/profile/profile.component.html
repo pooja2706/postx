@@ -1,0 +1,45 @@
+<body>
+    <div class="row dashboard">
+      <div class="image-div col-md-2"  style="background-image: url({{imageurl}});">
+        <input type="file" (change)="choosefile($event)" accept="image/*" >
+      </div>
+      <div class="col-md-8 dashboard-text">
+        <div style="margin-top: 20px;">
+          {{name}}
+        </div>
+        <div class="row profile-info">
+          <div class="col-md-4">Posts: {{countData.posts}}</div>
+          <div class="col-md-4">Followers: {{countData.followers}}</div>
+          <div class="col-md-4">Following: {{countData.following}}</div>
+        </div>
+      </div>
+      <div class="col-md-1">
+        <button (click)="signout()" matIcon>
+          <mat-icon aria-label="Logout icon" fontIcon="logout" matTooltip="Sign Out">Sign out</mat-icon>
+        </button>
+      </div>
+    </div>
+  <div class="row navigation-option">
+    <button [ngClass]="{onClick: poststate}" class="col-md-4" (click)="checkPosts()">Posts</button>
+    <button [ngClass]="{onClick: followerstate}" class="col-md-4" (click)="checkFollowers()">Followers</button>
+    <button [ngClass]="{onClick: followingstate}" class="col-md-4" (click)="checkFollowing()">Following</button>
+
+  </div>
+
+  <app-posts *ngIf="poststate"></app-posts>
+  <app-followers *ngIf="followerstate"></app-followers>
+  <app-following *ngIf="followingstate"></app-following>
+
+  <!-- <img src={{imageurl}} class="imageselected"> -->
+
+  <!-- <mat-card *ngFor="let post of posts">
+    <mat-card-header class="row">
+      <div class="col-md-1 image-small-div" *ngIf="imageurl!= 'not selected'" style="background-image: url({{imageurl}});">
+      </div >
+      <div class="col-md-8">{{name}}</div>
+    </mat-card-header>
+    <mat-card-subtitle>
+      {{post.data}}
+    </mat-card-subtitle>
+  </mat-card> -->
+</body>

@@ -1,0 +1,16 @@
+<body>
+  <div *ngIf="posts.length==0" class="loading">
+    Nothing to display
+  </div>
+  <mat-card *ngFor="let post of posts">
+    <mat-card-header class="row">
+      <div class="col-md-1 image-small-div" *ngIf="imageurl!= 'not selected'" style="background-image: url({{imageurl}});">
+      </div >
+      <div class="col-md-8 content">{{name}}</div>
+    </mat-card-header>
+    <mat-card-subtitle>
+      {{post.data}}
+    </mat-card-subtitle>
+  </mat-card>
+</body>
+<!-- here -->

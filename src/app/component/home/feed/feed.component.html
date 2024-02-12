@@ -1,0 +1,66 @@
+<body>
+  <app-users *ngIf="usersclicked"></app-users>
+  <div *ngIf="!usersclicked">
+    <div>
+      <button class="write" mat-raised-button (click)="opendialog()">
+        Write
+      </button>
+    </div>
+    <div *ngIf="!followerslist" class="nofollowers">
+      <div class="content">
+        You do not follow anyone
+      </div>
+      <div class="content">
+      Follow someone?
+      </div>
+      <button mat-button (click)="setusersclicked(true)"> Find Friends</button>
+
+    </div>
+
+    <div *ngIf="followerslist">
+
+      <div class="loading" *ngIf="posts.length==0">
+        <!-- <mat-spinner
+              [diameter]="30" >
+        </mat-spinner> -->
+        Nothing to display
+      </div>
+      <div >
+        {{sortDates(posts)}}
+      </div>
+    <!-- <button (click)="sortDates(posts)">dates</button> -->
+      <div *ngFor="let cardD of cardDetails; "  class="cards">
+        <!-- <div class="cards"> -->
+          <!-- <button click="sortDates(posts)">dates</button> -->
+        <!-- <li > -->
+          <!-- <div >
+            {{sortDates(posts)}}
+          </div> -->
+
+          <mat-card >
+            <mat-card-header class="row">
+              <div class="col-md-1 image-small-div"  style="background-image: url({{cardD.post.user.profileImageurl}});">
+                <!-- {{post.user.profileImageurl}} -->
+              </div >
+              <div class="col-md-5 title">
+                {{cardD.post.user.details.email}}
+              </div>
+              <div class="col-md-3 time">
+                {{getTimestamp(cardD.post)}}
+              </div>
+              <div>
+
+              </div>
+            </mat-card-header>
+            <mat-card-subtitle>
+              {{cardD.post.post.data}}
+            </mat-card-subtitle>
+
+          </mat-card>
+        <!-- </li> -->
+      </div>
+    </div>
+  </div>
+
+</body>
+

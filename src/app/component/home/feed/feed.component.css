@@ -1,0 +1,101 @@
+body{
+  margin-top: 30px;
+  padding-bottom: 100px;
+  background-size: cover;
+  /* background-color: #fff6fa; */
+  /* } */
+}
+.write{
+  margin: auto;
+  margin-bottom: 30px;
+  width: fit-content;
+  color: rgb(255, 121, 147);;
+}
+div{
+  display: grid;
+}
+.cards{
+  /* background-color: brown; */
+}
+mat-card{
+  /* background-color: brown;*/
+  width: 30%;
+  margin: auto;
+  margin-top: 20px;
+  border-left: inset;
+  border-color: #dc143c;
+  min-width: 370px;
+  /* border-top: inset;
+  border-top-color: #dc143c; */
+}
+
+.image-small-div{
+  background-color: #5af9c252;
+    background-image: url('profilenone.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    /* margin: auto; */
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+mat-card-subtitle{
+  margin-left: 46px;
+}
+mat-card-header{
+  /* background-color: aliceblue; */
+  min-width: 370px;
+  width: auto;
+  /* color: rgb(255, 121, 147);; */
+
+}
+
+.loading{
+  width: fit-content;
+  margin: auto;
+  margin-top: 50px;
+}
+.time{
+  margin: auto;
+  margin-right: 0px;
+  width: fit-content;
+  font-size: 9px;
+  color: #bbbbbb8f;
+  -webkit-text-stroke-width: thin;
+}
+
+.title{
+  /* background-color: antiquewhite; */
+  width: fit-content;
+  color: rgb(255 123 149);
+  font-family: sans-serif;
+  -webkit-text-stroke-width: thin;
+
+}
+.content{
+  margin: auto;
+  color: #ff748d;
+}
+.nofollowers{
+  display: grid;
+  /* align-items: center; */
+}
+button{
+  border-color: black;
+  border-radius: 10px;
+  width: 2.5in;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  border-style: inset;
+  border-width: thin;
+  margin-bottom: 30px;
+}
+button:hover{
+background-color: white;
+color: #ff748d;
+font-weight: bold;
+border-color: #ff748d;
+    box-shadow: 1px 2px 3px rgb(255 0 0 / 21%), inset 1px 1px 10px rgb(255 189 233);
+}

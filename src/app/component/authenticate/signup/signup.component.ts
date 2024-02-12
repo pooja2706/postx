@@ -7,8 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { doc, getFirestore, setDoc } from "firebase/firestore";
+import { logopath } from '../../../../constants/imagepath';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 interface SignUpData{
   name: string,
@@ -27,7 +29,8 @@ interface SignUpData{
     ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    MatProgressSpinnerModule
     // BrowserAnimationsModule
   ],
   templateUrl: './signup.component.html',
@@ -37,7 +40,9 @@ export class SignupComponent {
   signupform: FormGroup
   signupdata: SignUpData= {name: '',email: '',password: ''};
   db=getFirestore()
-  constructor(fb: FormBuilder){
+  logopath=logopath
+  pageloading: boolean=false
+  constructor(fb: FormBuilder, private router: Router){
     this.signupform=fb.group({
       name:             new FormControl('pooja',[Validators.required]),
       email:            new FormControl('p@gmail.com',[Validators.required]),
@@ -50,20 +55,24 @@ export class SignupComponent {
     this.signupdata.name=this.signupform.controls['name'].value
     this.signupdata.email=this.signupform.controls['email'].value
     this.signupdata.password=this.signupform.controls['password'].value
-    console.log(this.signupdata);
+    // console.log(this.signupdata);
     this.signUp()
   }
   signUp(){
+    this.pageloading=true
     const auth = getAuth();
-    console.log(auth);
+    // console.log(auth);
 
   createUserWithEmailAndPassword(auth, this.signupdata.email, this.signupdata.password)
   .then((userCredential) => {
-   console.log(userCredential);
+  //  console.log(userCredential);
    const userRef=doc(this.db, 'users', userCredential.user.uid)
    setDoc(userRef, this.signupdata)
+   this.router.navigateByUrl('');
+   this.pageloading=false
   })
   .catch((error) => {
+    this.pageloading=false
     if(error.code=='auth/invalid-email'){
       alert('Invalid email')
     }
@@ -80,7 +89,7 @@ export class SignupComponent {
   });
   }
   changes(){
-    console.log(this.signupform.value);
+    // console.log(this.signupform.value);
   }
 
   check(): boolean{

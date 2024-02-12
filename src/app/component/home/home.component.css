@@ -1,0 +1,59 @@
+/* .newpage{
+  background-color: #fff6fa;
+
+} */
+
+body{
+  width: 100%;
+  background-color: white;
+}
+.header{
+  background-color: aliceblue;
+  /* width: 100%; */
+
+}
+.welcome{
+    margin-top: 15px;
+    font-size: larger;
+    font-family: cursive;
+    color: rgb(255, 121, 147);;
+}
+/* .logo{
+  height: 30px;
+  width: 30px;
+} */
+.optionsnav :hover{
+   cursor: pointer;
+   color: crimson;
+  -webkit-text-stroke-width: thin;
+  border-bottom-style: groove;
+  border-bottom-color: crimson;
+}
+button{
+  border-style: dashed;
+  color: rgb(255, 121, 147);
+  -webkit-text-stroke-width: thin;
+  border-color: transparent;
+  background-color: inherit;
+  padding: 10px;
+  height: -webkit-fill-available;
+  /* padding-bottom: 10px; */
+}
+
+.clicked{
+  cursor: pointer;
+  -webkit-text-stroke-width: thin;
+  border-bottom-style: groove;
+  border-bottom-color: crimson;
+  color: crimson;
+
+}
+/* nav{
+  background-color: rgb(164, 164, 224);
+} */
+nav{
+  background-color: rgb(255 255 255);
+  box-shadow: -2px -11px 20px 0px;
+  /* position: fixed; */
+}
+

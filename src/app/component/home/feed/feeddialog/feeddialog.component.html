@@ -1,0 +1,15 @@
+<div>
+  <div class="post">
+    <form [formGroup]="forms">
+      <mat-form-field>
+        <mat-label>
+          Write your post here
+        </mat-label>
+        <textarea matInput placeholder="Write your post here" formControlName="data" style="height: 3.5in;"></textarea>
+      </mat-form-field>
+      <button (click)="onSubmit()">
+        Save
+      </button>
+    </form>
+  </div>
+</div>

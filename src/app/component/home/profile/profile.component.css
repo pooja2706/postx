@@ -1,0 +1,102 @@
+body{
+  margin-top: 10px;
+}
+mat-card-subtitle{
+  margin: 15px;
+
+  /* margin-top: 10px; */
+}
+mat-card{
+  min-width: 400px;
+}
+.btn-select-image{
+  /* visibility: hidden; */
+  background-color: aquamarine;
+}
+
+input::file-selector-button {
+  background-color: transparent;
+   margin: 4px 2px;
+    content-visibility: hidden;
+    height: 100px;
+    width: 100px;
+    border-width: inherit;
+    border-radius: 50px;
+    /* background: url("http://localhost:4200/media/profilenone.png"); */
+}
+
+/* .imagenotselected{
+  background-color: rgb(160, 88, 98);
+  /* background-image: url('profilenone.png');
+
+} */
+.image-small-div{
+  background-color: #5af9c252;
+    background-image: url('profilenone.png');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    /* margin: auto; */
+    border-radius: 50px;
+    overflow: hidden;
+}
+.image-div{
+    background-color: #5af9c252;
+    background-image: url('profilenone.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.dashboard{
+  width: 50%;
+  margin: auto;
+  margin-bottom: 30px;
+
+  /* background-color: antiquewhite; */
+}
+
+.profile-info{
+  /* background-color: aqua; */
+  margin-top: 30px;
+  font-size: 12px;
+  color: lightslategrey;
+}
+
+.dashboard-text{
+  /* background-color: blueviolet; */
+  font-family: cursive;
+    color: darkslategrey;
+}
+
+.navigation-option{
+  width: fit-content;
+  margin: auto;
+  border: transparent;
+  border-top: #f2efef;
+  border-width: 1pt;
+  border-style: solid;
+}
+
+button{
+  width: fit-content;
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-text-stroke-width: thin;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -1px;
+  border-width: 1pt;
+  padding-top: 10px;
+}
+
+button:hover{
+  border-top-color: black;
+}
+
+.onClick{
+  border-top-color: black;
+}

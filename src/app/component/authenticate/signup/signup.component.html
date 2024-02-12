@@ -1,41 +1,48 @@
-<body class="row">
-  <div class="col-md-8 signup " >
-    <div class="logo">Logo</div>
-  <div class="loginButton">
-    <button mat-button [routerLink]="['/login']" class="login">
-      Login
-    </button>
+<body >
+  <div *ngIf="pageloading" class="pageloading">
+    <mat-spinner
+        [diameter]="30" ></mat-spinner>
   </div>
-<div >
-  <form [formGroup]="signupform" autocomplete="off">
-    <mat-form-field appearance="outline">
-      <mat-label>Name</mat-label>
-      <input formControlName="name" matInput placeholder="Enter your name"/>
-    </mat-form-field>
+  <div *ngIf="!pageloading">
+    <div class="header">
+      <img  src={{logopath}} class="logo">
+      <!-- <div class="loginButton"> -->
+        <button mat-button [routerLink]="['/login']" class="login">
+          Login
+        </button>
+      <!-- </div> -->
+    </div>
+    <div class="signupintro">Create Account</div>
 
-    <mat-form-field appearance="outline">
-      <mat-label>E-Mail</mat-label>
-      <input type="email" formControlName="email" matInput placeholder="abc@example.com" />
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Password</mat-label>
-      <input formControlName="password" matInput placeholder="Enter your password here" />
-    </mat-form-field>
+    <!-- <div > -->
+      <form [formGroup]="signupform" autocomplete="off">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input formControlName="name" matInput placeholder="Enter your name"/>
+        </mat-form-field>
 
-    <mat-form-field appearance="outline" class="confirmpassword">
-      <mat-label>Confirm Password</mat-label>
-      <input formControlName="confirmpassword" matInput placeholder="Enter your password again" >
-      <!-- <mat-icon matSuffix fontIcon="done"></mat-icon> -->
-      <mat-icon matSuffix fontIcon="done" *ngIf="check() && signupform.controls['confirmpassword'].value!=''"></mat-icon>
-      <mat-icon matSuffix fontIcon="highlight_off" *ngIf="!check()&& signupform.controls['confirmpassword'].value!=''"></mat-icon>
-    </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>E-Mail</mat-label>
+          <input type="email" formControlName="email" matInput placeholder="abc@example.com" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input formControlName="password" matInput placeholder="Enter your password here" />
+        </mat-form-field>
 
-    <button mat-raised-button (click)="onSubmit()" [disabled]="!check() || !signupform.valid">Sign Up
-    </button>
-  </form>
-</div>
-</div>
-<!-- <div class="col-md-6">
-  here
-</div> -->
+        <mat-form-field appearance="outline" class="confirmpassword">
+          <mat-label>Confirm Password</mat-label>
+          <input formControlName="confirmpassword" matInput placeholder="Enter your password again" >
+          <!-- <mat-icon matSuffix fontIcon="done"></mat-icon> -->
+          <mat-icon matSuffix fontIcon="done" *ngIf="check() && signupform.controls['confirmpassword'].value!=''"></mat-icon>
+          <mat-icon matSuffix fontIcon="highlight_off" *ngIf="!check()&& signupform.controls['confirmpassword'].value!=''"></mat-icon>
+        </mat-form-field>
+
+        <button mat-button class="signupbtn" (click)="onSubmit()" [disabled]="!check() || !signupform.valid">Sign Up
+        </button>
+      </form>
+    <!-- </div> -->
+  </div>
+
+
 </body>

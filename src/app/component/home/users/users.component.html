@@ -1,0 +1,46 @@
+<body>
+  <!-- <div *ngIf="pageloading">Loading...</div> -->
+  <div class="loading" *ngIf="pageloading">
+    <!-- <mat-spinner
+          [diameter]="30" >
+    </mat-spinner> -->
+    Nothing to display
+  </div>
+  <mat-card *ngFor="let user of users;" class="row" >
+    {{setLoadingState(false)}}
+    <mat-card-header class="col-md-6">
+      <div style="display: none;"></div>
+      <div class ="mat-card-header-text row" >
+        <div class="col-md-1 image-small-div"  style="background-image: url({{user.userdata.profileImageurl}});">
+          <!-- {{post.user.profileImageurl}} -->
+        </div >
+        <div class="col-md-8 div-name">
+          <div style="min-width: 120px;">
+          {{user.userdata.details.name}}
+          </div>
+          <div style="width: 70px; font-size: 10px; color: grey;">
+            Followers: {{user.followers}}
+          </div>
+        </div>
+      </div>
+
+
+    </mat-card-header>
+    <mat-card-actions class="col-md-6" >
+      <!-- <div> -->
+        <div >
+          <mat-spinner
+          *ngIf="user.loading"
+          [diameter]="30" ></mat-spinner>
+          <button mat-raised-button (click)="follow(user)" *ngIf="!user.loading && !user.following">Follow</button>
+          <button (click)="unfollow(user)" *ngIf="user.following && !user.loading" class="unfollow">Following</button>
+
+        </div>
+      <!-- </div> -->
+      <!-- <button mat-raised-button (click)="follow(user)"  *ngIf="checkFollowing(user.id) | async">Unfollow</button> -->
+
+    </mat-card-actions>
+  </mat-card>
+
+</body>
+<!-- <div *>{{user.name}}</div> -->

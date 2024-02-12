@@ -1,0 +1,10 @@
+form{
+  display: grid;
+  padding: 10px;
+}
+mat-form-field{
+  height: 4in;
+}
+textarea{
+  height: 4in;
+}
