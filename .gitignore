@@ -43,3 +43,4 @@ Thumbs.db
 
 #Specific files
 src/app/app.component.ts
+src/app/env

@@ -25,7 +25,7 @@
     <mat-spinner
           *ngIf="follower.loading"
           [diameter]="30" ></mat-spinner>
-    <button mat-raised-button *ngIf="!follower.following  && !follower.loading" (click)="follow(follower)">Follow</button>
+    <button class="follow" mat-raised-button *ngIf="!follower.following  && !follower.loading" (click)="follow(follower)">Follow</button>
     <button class="unfollow" *ngIf="follower.following   && !follower.loading"  (click)="unfollow(follower)">Following</button>
   </mat-card-actions>
 </mat-card>

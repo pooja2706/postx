@@ -15,6 +15,7 @@ mat-card{
 mat-card-actions{
   margin: auto;
   margin-right: 5px;
+  width: fit-content;
 }
 
 mat-card-header{
