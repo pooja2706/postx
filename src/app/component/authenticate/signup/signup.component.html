@@ -1,48 +1,59 @@
-<body >
-  <div *ngIf="pageloading" class="pageloading">
-    <mat-spinner
-        [diameter]="30" ></mat-spinner>
-  </div>
-  <div *ngIf="!pageloading">
-    <div class="header">
-      <img  src={{logopath}} class="logo">
-      <!-- <div class="loginButton"> -->
-        <button mat-button [routerLink]="['/login']" class="login">
-          Login
-        </button>
+<body class="row">
+
+  <div class="col-md-6 left ">
+    <div *ngIf="pageloading" class="pageloading">
+      <mat-spinner
+          [diameter]="30" ></mat-spinner>
+    </div>
+    <div *ngIf="!pageloading">
+      <!-- <div class="header"> -->
+        <!-- <img  src={{logopath}} class="logo"> -->
+        <!-- <div class="loginButton"> -->
+
+        <!-- </div> -->
+      <!-- </div> -->
+      <div class="signupintro">Create Account</div>
+
+      <!-- <div > -->
+        <form [formGroup]="signupform" autocomplete="off">
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input formControlName="name" matInput placeholder="Enter your name"/>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>E-Mail</mat-label>
+            <input type="email" formControlName="email" matInput placeholder="abc@example.com" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input type="password" formControlName="password" matInput placeholder="Enter your password here" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="confirmpassword">
+            <mat-label>Confirm Password</mat-label>
+            <input type="password" formControlName="confirmpassword" matInput placeholder="Enter your password again" >
+            <!-- <mat-icon matSuffix fontIcon="done"></mat-icon> -->
+            <mat-icon matSuffix fontIcon="done" *ngIf="check() && signupform.controls['confirmpassword'].value!=''"></mat-icon>
+            <mat-icon matSuffix fontIcon="highlight_off" *ngIf="!check()&& signupform.controls['confirmpassword'].value!=''"></mat-icon>
+          </mat-form-field>
+
+          <button class="signupbtn" (click)="onSubmit()" [disabled]="!check() || !signupform.valid">Sign Up
+          </button>
+        </form>
+        <div class="loginbtn">
+          <button [routerLink]="['/login']" class="login">
+            Login
+          </button>
+        </div>
+
       <!-- </div> -->
     </div>
-    <div class="signupintro">Create Account</div>
-
-    <!-- <div > -->
-      <form [formGroup]="signupform" autocomplete="off">
-        <mat-form-field appearance="outline">
-          <mat-label>Name</mat-label>
-          <input formControlName="name" matInput placeholder="Enter your name"/>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-          <mat-label>E-Mail</mat-label>
-          <input type="email" formControlName="email" matInput placeholder="abc@example.com" />
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Password</mat-label>
-          <input type="password" formControlName="password" matInput placeholder="Enter your password here" />
-        </mat-form-field>
-
-        <mat-form-field appearance="outline" class="confirmpassword">
-          <mat-label>Confirm Password</mat-label>
-          <input type="password" formControlName="confirmpassword" matInput placeholder="Enter your password again" >
-          <!-- <mat-icon matSuffix fontIcon="done"></mat-icon> -->
-          <mat-icon matSuffix fontIcon="done" *ngIf="check() && signupform.controls['confirmpassword'].value!=''"></mat-icon>
-          <mat-icon matSuffix fontIcon="highlight_off" *ngIf="!check()&& signupform.controls['confirmpassword'].value!=''"></mat-icon>
-        </mat-form-field>
-
-        <button mat-button class="signupbtn" (click)="onSubmit()" [disabled]="!check() || !signupform.valid">Sign Up
-        </button>
-      </form>
-    <!-- </div> -->
   </div>
+  <div class="col-md-6 right">
+    <img src="https://cdni.iconscout.com/illustration/premium/thumb/sign-up-4922762-4097209.png?f=webp">
+  </div>
+
 
 
 </body>

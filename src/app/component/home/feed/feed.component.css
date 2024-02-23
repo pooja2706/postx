@@ -6,10 +6,11 @@ body{
   /* } */
 }
 .write{
-  margin: auto;
-  margin-bottom: 30px;
-  width: fit-content;
-  color: rgb(255, 121, 147);;
+    margin-top: 15px;
+    font-size: large;
+    font-family: sans-serif;
+    color: rgb(33 32 32);
+    font-weight: 700;
 }
 div{
   display: grid;
@@ -23,7 +24,7 @@ mat-card{
   margin: auto;
   margin-top: 20px;
   border-left: inset;
-  border-color: #dc143c;
+  border-color: #1a1919;
   min-width: 370px;
   /* border-top: inset;
   border-top-color: #dc143c; */
@@ -75,7 +76,9 @@ mat-card-header{
 }
 .content{
   margin: auto;
-  color: #ff748d;
+  font-family: sans-serif;
+    color: rgb(33 32 32);
+    /* font-weight: 700; */
 }
 .nofollowers{
   display: grid;
@@ -94,8 +97,10 @@ button{
 }
 button:hover{
 background-color: white;
-color: #ff748d;
+font-family: sans-serif;
+color: rgb(33 32 32);
+    /* font-weight: 700; */
 font-weight: bold;
-border-color: #ff748d;
-    box-shadow: 1px 2px 3px rgb(255 0 0 / 21%), inset 1px 1px 10px rgb(255 189 233);
+border-color: #242323;
+    box-shadow: 1px 2px 3px rgba(11, 11, 11, 0.21), inset 1px 1px 10px rgb(10, 10, 10);
 }

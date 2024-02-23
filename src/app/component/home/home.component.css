@@ -15,8 +15,8 @@ body{
 .welcome{
     margin-top: 15px;
     font-size: larger;
-    font-family: cursive;
-    color: rgb(255, 121, 147);;
+    font-family: sans-serif;
+    color: rgb(33 32 32);
 }
 /* .logo{
   height: 30px;
@@ -24,14 +24,14 @@ body{
 } */
 .optionsnav :hover{
    cursor: pointer;
-   color: crimson;
+   color: rgb(33 32 32);
   -webkit-text-stroke-width: thin;
   border-bottom-style: groove;
-  border-bottom-color: crimson;
+  border-bottom-color: rgb(33 32 32);
 }
 button{
   border-style: dashed;
-  color: rgb(255, 121, 147);
+  color: rgb(33 32 32);
   -webkit-text-stroke-width: thin;
   border-color: transparent;
   background-color: inherit;
@@ -44,8 +44,8 @@ button{
   cursor: pointer;
   -webkit-text-stroke-width: thin;
   border-bottom-style: groove;
-  border-bottom-color: crimson;
-  color: crimson;
+  border-bottom-color: rgb(33 32 32);
+  color: rgb(33 32 32);
 
 }
 /* nav{

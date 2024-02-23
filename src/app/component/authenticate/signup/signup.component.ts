@@ -44,10 +44,10 @@ export class SignupComponent {
   pageloading: boolean=false
   constructor(fb: FormBuilder, private router: Router){
     this.signupform=fb.group({
-      name:             new FormControl('pooja',[Validators.required]),
-      email:            new FormControl('p@gmail.com',[Validators.required]),
-      password:         new FormControl('123456',[Validators.required]),
-      confirmpassword:  new FormControl('123456',[Validators.required])
+      name:             new FormControl('',[Validators.required]),
+      email:            new FormControl('',[Validators.required]),
+      password:         new FormControl('',[Validators.required]),
+      confirmpassword:  new FormControl('',[Validators.required])
     })
   }
 
@@ -65,7 +65,6 @@ export class SignupComponent {
 
   createUserWithEmailAndPassword(auth, this.signupdata.email, this.signupdata.password)
   .then((userCredential) => {
-  //  console.log(userCredential);
    const userRef=doc(this.db, 'users', userCredential.user.uid)
    setDoc(userRef, this.signupdata)
    this.router.navigateByUrl('');
