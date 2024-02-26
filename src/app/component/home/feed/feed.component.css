@@ -6,11 +6,20 @@ body{
   /* } */
 }
 .write{
+  background-color: white;
     margin-top: 15px;
     font-size: large;
     font-family: sans-serif;
     color: rgb(33 32 32);
     font-weight: 700;
+}
+.write:hover{
+  background-color: white;
+    /* height: 40px; */
+    color: #000;
+    font-weight: bold;
+    border-color: #fff;
+    box-shadow: 0px 1px 3px #000000, inset 0px 0px 2px #fff;
 }
 div{
   display: grid;

@@ -31,8 +31,8 @@ export class SigninComponent {
   pageloading: boolean=false;
   constructor(fb: FormBuilder, private router: Router){
     this.signinform=fb.group({
-      email:    new FormControl('p@gmail.com', [Validators.required]),
-      password: new FormControl('123456', [Validators.required])
+      email:    new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required])
     })
   }
   signIn(){

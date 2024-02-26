@@ -12,11 +12,13 @@ form{
   margin-top: 30px;
 }
 .signinIntro{
+  /* padding-top: 17px; */
   margin: auto;
   font-size: 30px;
-  font-family: cursive;
+  font-family: sans-serif;
   font-weight: bolder;
-  color: #ff748d;
+  color: rgb(33 32 32);
+  text-align: center;
 }
 .header{
   display: grid;
@@ -26,7 +28,7 @@ body{
   /* margin: 20px; */
   /* height: 100px; */
   /* background-image: url("https://img.freepik.com/free-vector/prickly-juniper-branch-beige-gray-minimal-background_53876-113047.jpg?size=626&ext=jpg&ga=GA1.1.1448711260.1706140800&semt=ais"); */
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   /* height: 100%; */
   background-size: cover;
 }
@@ -49,9 +51,9 @@ button:hover{
   box-shadow: 0px 2px 3px rgb(255 0 0 / 50%), inset 0px 0px 2px rgb(252 2 2 / 95%);
 }
 
-.signinbtn{
+/* .signinbtn{
   width: 100px;
-}
+} */
 mat-spinner{
   margin: auto;
   /* padding-top: 35%; */
@@ -64,4 +66,85 @@ mat-spinner{
   display: flex;
   margin: auto;
   align-items: center;
+}
+
+.left{
+  width: 335px;
+  background-color: white;
+  border-top: hidden;
+  border-radius: 18px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 15px rgb(162 155 155 / 50%), inset 0px 0px 2px rgb(255 255 255);
+}
+.right{
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  /* background-color: rgb(20, 116, 219); */
+}
+
+img{
+  margin: auto;
+  width: 525px;
+  height: 590px;
+  vertical-align: middle;
+}
+.signinbtn:hover{
+  cursor: pointer;
+  color: white;
+  background-color: rgb(20, 116, 219);
+  font-weight: bold;
+  border-color: rgb(20, 116, 219);
+  box-shadow: 0px 1px 1px rgb(20 116 219), inset 0px 0px 2px rgb(20 116 219 / 95%);
+}
+.signinbtn{
+  margin: auto;
+  border: groove;
+  /* border-color: black; */
+  border-width: thin;
+  border-radius: 10px;
+  width: 2.5in;
+  background-color: rgb(20, 116, 219);
+    color: white;
+    height: 42px;
+}
+.signup-btn{
+  width: fit-content;
+  margin: auto;
+  margin-top: 10px;
+}
+.signup{
+  margin: auto;
+  height: 40px;
+  background-color: white;
+  border-color: #8d8d8d;
+  border-radius: 10px;
+  width: 2.5in;
+  margin-top: 0px;
+  text-align: center;
+  border-style: solid;
+  border-width: thin;
+}
+.signup:hover{
+    background-color: white;
+    color: #000;
+    font-weight: bold;
+    border-color: #fff;
+    box-shadow: 0px 1px 3px #b0b0b0, inset 0px 0px 2px #fff;
+}
+.left{
+    padding: 40px;
+    padding-bottom: 60px;
+    height: fit-content;
+    width: 335px;
+    background-color: white;
+    border-top: hidden;
+    border-radius: 18px;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 15px rgb(162 155 155 / 50%), inset 0px 0px 2px rgb(255 255 255);
 }

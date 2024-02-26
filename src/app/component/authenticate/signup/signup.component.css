@@ -100,11 +100,6 @@ form{
     /* min-width: 1.5in; */
 }
 
-/* mat-error{
-  margin-top: 0px;
-  margin-bottom: 20px;
-} */
-
 .login:hover{
     background-color: white;
     color: #000;
